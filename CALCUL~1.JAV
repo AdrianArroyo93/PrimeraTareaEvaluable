@@ -1,22 +1,24 @@
-package CalculaTuEdad;
-
+package CalcularVolumenEsfera;
 import java.util.Scanner; // Importamos la clase Scanner para leer la entrada del usuario
+public class CalcularVolumenEsfera {
 
-public class CalculaTuEdad {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in); // Creamos una instancia de Scanner
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner scanner = new Scanner(System.in); // Creamos una instancia de Scanner
 
-        // Solicitamos al usuario que ingrese su año de nacimiento
-        System.out.print("Introduce tu año de nacimiento: ");
-        int anioNacimiento = scanner.nextInt();
+        // Solicitamos al usuario que ingrese el radio de la esfera
+        System.out.print("Introduce el radio de la esfera: ");
+        double radio = scanner.nextDouble();
 
-        // Definimos el año actual
-        int anioActual = 2024;
+        // Calculamos el volumen de la esfera
+        double volumen = (4.0 / 3.0) * Math.PI * Math.pow(radio, 3); 
+        //Calculamos el volumen de la esfera utilizando la fórmula V=43πR3. Math.PI proporciona el valor de π y Math.pow(radio, 3) calcula el radio al cubo.
 
-        // Calculamos la edad
-        int edad = anioActual - anioNacimiento;
 
-        // Mostramos la edad al usuario
-        System.out.println("Tu edad actual es: " + edad + " años.");
-    }
+        // Mostramos el volumen al usuario
+        System.out.println("El volumen de la esfera es: " + volumen);
+
+	}
+
 }
